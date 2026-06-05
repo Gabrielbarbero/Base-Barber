@@ -1,0 +1,92 @@
+.Header {
+
+    background-color: rgb(75, 75, 75);
+
+    height:10vh ;
+
+    width: 100%;
+
+    box-shadow: 0 30px 500px 0px rgba(0,0,0,1);
+}
+.NavBar{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height:10vh;
+
+    background-color: rgba(0, 0, 0, 0.774);
+    
+    padding: 0 0.8vw;
+
+    box-sizing: border-box;
+
+}
+.text_NavBar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    height: 10vh;
+}
+.logo{    
+    max-width: 5.5vw;
+    max-height: 5.5vh;
+
+    margin-right: 0.8vw;
+
+    border: 5px solid white;
+    border-radius: 15px;
+}
+.title_NavBar{
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.subtitle_NavBar{
+    color: rgb(187, 174, 0);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 4.5vmin; 
+
+    margin-left: 7px;
+
+}
+
+.Connect_NavBar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+.Connect_NavBar a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2.5vmin;
+    transition: all 0.3s none;
+}
+
+.Connect_NavBar a:hover {
+    color: rgb(187, 174, 0);
+    transform: scaleX(1.05);
+    transform: scaleY(1.1);
+}
+.Custom_Buttom{
+    position: fixed;
+    left: 88%;
+
+    text-decoration: none;
+    font-size: 3vmin;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    margin-right: 0.8vw;
+    padding: 7px;
+    border-radius: 5px;
+
+    background-color: rgb(187, 174, 0);
+    color: rgba(0, 0, 0, 0.774);
+}
