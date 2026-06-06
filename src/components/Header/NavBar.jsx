@@ -18,7 +18,7 @@ function NavBar(){
                         <a href="">Trabalhos</a>
                         <a href="">Contato</a>
                 </div>
-                <a href="" className={styles.Custom_Buttom}>Agendar Horarios</a>
+                <a href="" className={styles.Custom_Buttom}>Agendar Horarios &gt;</a>
             </div>
         </header>
     </>

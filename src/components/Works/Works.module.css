@@ -1,0 +1,65 @@
+.startDiv{
+    display: flex;
+    flex-direction: row;
+    margin-top: 0;
+    background-color: rgb(8, 8, 8);
+}
+.Title{
+    width: 85vw;
+    padding: 30px;
+
+}
+.h3{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    letter-spacing: 0.2em;
+    color: rgb(187, 174, 0);
+    margin: 0;
+}
+.h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 35px;
+    letter-spacing: -0.1em;
+    color: rgb(255, 255, 255);
+
+}
+.hourWorks{
+    padding: 35px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.hourLink{
+    white-space: nowrap;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    color: rgb(187, 174, 0);
+
+}
+
+/* photos*/
+.cardsContainer{
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: rgb(8, 8, 8);
+
+}
+.cards{
+    display: grid;
+    padding-bottom: 50px;
+    grid-template-columns: repeat(3,1fr);
+    width: 84%;
+}
+.cards img{
+    width: 350px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+.cards img:hover{
+    transform: scale(1.01);
+}

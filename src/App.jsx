@@ -3,11 +3,17 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
 import NavBar from './components/Header/NavBar'
+import ScrollingScreen from './components/Scrolling_Screen/ScrollingScreen'
+import Statistic from './components/Statistics/Statistics'
+import Works from './components/Works/Works'
 function App() {
   const [count, setCount] = useState(0)
   return (
     <div>
       <NavBar/>
+      <ScrollingScreen/>
+      <Statistic/>
+      <Works/>
     </div>
   )
 }

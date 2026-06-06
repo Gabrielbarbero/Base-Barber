@@ -6,7 +6,7 @@
 
     width: 100%;
 
-    box-shadow: 0 30px 500px 0px rgba(0,0,0,1);
+
 }
 .NavBar{
     position: fixed;
@@ -21,7 +21,7 @@
     padding: 0 0.8vw;
 
     box-sizing: border-box;
-
+    z-index: 9999;
 }
 .text_NavBar{
     display: flex;
@@ -48,7 +48,7 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 4.5vmin; 
 
-    margin-left: 7px;
+    margin-left: 10px;
 
 }
 
@@ -77,15 +77,15 @@
 }
 .Custom_Buttom{
     position: fixed;
-    left: 88%;
+    left: 86%;
 
     text-decoration: none;
     font-size: 3vmin;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
     margin-right: 0.8vw;
-    padding: 7px;
-    border-radius: 5px;
+    padding: 10px;
+    border-radius: 2px;
 
     background-color: rgb(187, 174, 0);
     color: rgba(0, 0, 0, 0.774);
