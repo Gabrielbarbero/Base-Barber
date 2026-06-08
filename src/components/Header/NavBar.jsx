@@ -12,10 +12,10 @@ function NavBar(){
                     <h1 className={styles.subtitle_NavBar}>ABY</h1>
                 </div>
                 <div className={styles.Connect_NavBar}>
-                        <a href="">Combos</a>
-                        <a href="">Promoções</a>
-                        <a href="">Agendamento</a>
                         <a href="">Trabalhos</a>
+                        <a href="">Sobre Mim</a>
+                        <a href="">Tabela</a>
+                        <a href="">Agendamento</a>
                         <a href="">Contato</a>
                 </div>
                 <a href="" className={styles.Custom_Buttom}>Agendar Horarios &gt;</a>
