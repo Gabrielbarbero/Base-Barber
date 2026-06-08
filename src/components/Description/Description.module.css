@@ -1,28 +1,40 @@
+/* =========================================
+   BASE - DESKTOP E TABLETS (O seu código original)
+   ========================================= */
 .sectionContainer {
     background-color: rgb(8, 8, 8);
     min-height: 700px;
     padding: 50px;
+    box-sizing: border-box;
 }
+
 .h1 {
     color: rgb(187, 174, 0);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 0;
 }
+
 .organization {
     width: 100%;
     display: flex;
 }
+
 .separation {
-    padding-left: 4vmin;
-    padding-right: 4vmin;
-    width: 50%;
+    width: 100%; 
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 .photo {
     width: 80%;
     height: 100%;
     object-fit: cover;
     border-radius: 15px;
 }
+
 .p {
     width: 90%;
     color: white;
@@ -30,4 +42,41 @@
     font-size: 20px;
     margin-bottom: 20px;
     letter-spacing: 0.1em;
+}
+
+/* =========================================
+   ESTÁGIO ÚNICO: CELULARES (Até 768px)
+   ========================================= */
+@media (max-width: 768px) {
+    .sectionContainer {
+        min-height: auto; 
+    }
+
+    .organization {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .separation {
+        width: 100%; 
+        padding-left: 0;
+        padding-right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    .photo {
+        width: 100%;
+        height: auto; 
+        max-height: 350px; 
+        margin-bottom: 20px; 
+    }
+
+    .p {
+        width: 100%;
+        font-size: 16px;
+        text-align: justify; 
+        letter-spacing: 0; 
+    }
 }

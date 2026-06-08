@@ -1,3 +1,6 @@
+/* =========================================
+   BASE - DESKTOP (Telas grandes)
+   ========================================= */
 .CarouselContainer {
     width: 100%;
     height: 90vh; 
@@ -13,18 +16,16 @@
     transition: transform 0.5s ease-in-out; 
 }
 
-
 .Screen {
     flex: 0 0 100%;
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-        box-shadow: 
+    box-shadow: 
         inset 0 100px 100px 0 rgb(0, 0, 0),    
         inset 0 -100px 100px 0 rgb(0, 0, 0);
 }
-
 
 .Trade_Buttons {
     position: absolute; 
@@ -35,16 +36,13 @@
     z-index: 10; 
     width: 50px;
     height: 50px;
-    
     display: flex;
     justify-content: center;
     align-items: center;
-    
     background-color: rgba(92, 92, 92, 0.342);
     cursor: pointer;
     transition: background-color 0.2s;
 }
-
 
 .leftBtn {
     left: 20px;
@@ -58,7 +56,6 @@
     background-color: rgba(54, 54, 54, 0.5); 
 }
 
-
 .Seta {
     width: 50%;
     height: auto;
@@ -68,4 +65,49 @@
 
 .right {
     transform: rotate(180deg);
+}
+
+/* =========================================
+   ESTÁGIO 1: TABLETS (Entre 769px e 1100px)
+   ========================================= */
+@media (max-width: 1100px) {
+    .CarouselContainer {
+        height: 60vh; /* Reduz a altura para a imagem não ficar tão esticada verticalmente */
+    }
+
+    .Screen {
+        /* Diminui a área de sombra para não ofuscar a imagem numa tela mais estreita */
+        box-shadow: 
+            inset 0 60px 60px 0 rgb(0, 0, 0),    
+            inset 0 -60px 60px 0 rgb(0, 0, 0);
+    }
+}
+
+/* =========================================
+   ESTÁGIO 2: CELULARES (Até 768px)
+   ========================================= */
+@media (max-width: 768px) {
+    .CarouselContainer {
+        height: 45vh; /* Carrossel fica mais contido, parecendo um banner widescreen */
+    }
+
+    .Screen {
+        /* Sombra ainda mais sutil pro celular */
+        box-shadow: 
+            inset 0 40px 40px 0 rgb(0, 0, 0),    
+            inset 0 -40px 40px 0 rgb(0, 0, 0);
+    }
+
+    .Trade_Buttons {
+        width: 40px;  /* Botões levemente menores */
+        height: 40px;
+    }
+
+    .leftBtn {
+        left: 10px; /* Cola mais na borda pra liberar espaço pro centro da imagem */
+    }
+
+    .rightBtn {
+        right: 10px;
+    }
 }

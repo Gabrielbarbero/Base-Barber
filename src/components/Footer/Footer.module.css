@@ -1,61 +1,94 @@
-footer{
+/* =========================================
+   BASE - DESKTOP (Telas grandes)
+   ========================================= */
+footer {
     display: flex;
+    align-items: center; 
+    justify-content: space-between; 
     background-color: rgb(8, 8, 8);
     border-top: 1px solid rgb(59, 59, 59);
     padding: 30px;
 }
-.footerDescription{
+
+.footerDescription {
     margin-left: 15px;
     font-size: 15px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: rgb(99, 99, 99);
     letter-spacing: 0.05em;
 }
-.footerText{
+
+.footerText {
     display: flex;
     align-items: center;
 }
-.footerImageBackground{
+
+.footerImageBackground {
     background-color: rgb(187, 174, 0);
     border-radius: 5px;
 }
-.footerImage{
+
+.footerImage {
     width: 30px;
     height: 30px;
     flex-shrink: 0;
     padding: 7px;
-    filter: invert(100);
+    filter: invert(100%); 
 }
-.footerContainerLink{
-    width: 100%;
+
+.footerContainerLink {
     display: flex;
-    align-items: end;
-    justify-content: end;
+    align-items: center;
+    justify-content: flex-end;
 }
-.footerLink{
-    
+
+.footerLink {
     display: flex; 
     align-items: center;
     justify-content: center;
-    
     padding: 15px;
     height: 50px;
     text-decoration: none;
-    font-size: 3vmin;
+    font-size: 1.2rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
-
     color: rgb(187, 174, 0);
-
     box-sizing: border-box;
-    
     transition: all 0.3s ease;
 }
-.footerLink:hover{
+
+.footerLink:hover {
     color: rgb(8, 8, 8);
     text-shadow: 
         0 0 5px rgb(187, 174, 0),
         0 0 15px rgb(187, 174, 0),
         0 0 30px rgb(187, 174, 0),
         0 0 50px rgb(187, 174, 0);
+}
+
+/* =========================================
+   RESPONSIVIDADE (Tablets e Celulares)
+   ========================================= */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column; 
+        justify-content: center;
+        gap: 20px; 
+        padding: 30px 15px;
+    }
+
+    .footerText {
+        flex-direction: column; 
+        text-align: center;
+        gap: 10px;
+    }
+
+    .footerDescription {
+        margin-left: 0; 
+    }
+
+    .footerContainerLink {
+        justify-content: center; 
+        width: 100%;
+    }
 }

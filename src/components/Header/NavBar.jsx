@@ -1,27 +1,46 @@
 import styles from './NavBar.module.css'
 
-function NavBar(){
+// 1. Array de dados: todos os seus links organizados aqui fora
+const navLinks = [
+    { id: 'trabalhos', label: 'Trabalhos', url: '#trabalhos' },
+    { id: 'sobre', label: 'Sobre Mim', url: '#sobre' },
+    { id: 'tabela', label: 'Tabela', url: '#tabela' },
+    { id: 'agendamento', label: 'Agendamento', url: '#agendamento' },
+    { id: 'contato', label: 'Contato', url: '#contato' }
+];
+
+function NavBar() {
     const logo = 'https://img.icons8.com/?size=100&id=15ugJLhHdnQd&format=png&color=FFFFFF'
-    return(
-    <>
-        <header className={styles.Header}>
-            <div className={styles.NavBar}>
-                <div className={styles.text_NavBar}>
-                    <img src={logo} alt="logo" className={styles.logo}/>
-                    <h1 className={styles.title_NavBar}>Barbearia</h1>
-                    <h1 className={styles.subtitle_NavBar}>ABY</h1>
+    
+    return (
+        <>
+            <header className={styles.Header}>
+                <div className={styles.NavBar}>
+                    
+                    {/* Bloco da Logo e Títulos */}
+                    <div className={styles.text_NavBar}>
+                        <img src={logo} alt="logo" className={styles.logo}/>
+                        <h1 className={styles.title_NavBar}>Barbearia</h1>
+                        <h1 className={styles.subtitle_NavBar}>ABY</h1>
+                    </div>
+                    
+                    {/* 2. O .map() em ação substituindo as repetições */}
+                    <div className={styles.Connect_NavBar}>
+                        {navLinks.map((link) => (
+                            <a key={link.id} href={link.url}>
+                                {link.label}
+                            </a>
+                        ))}
+                    </div>
+                    
+                    {/* Botão de Ação Principal */}
+                    <a href="#agendamento" className={styles.Custom_Buttom}>
+                        Agendar Horarios &gt;
+                    </a>
+                    
                 </div>
-                <div className={styles.Connect_NavBar}>
-                        <a href="">Trabalhos</a>
-                        <a href="">Sobre Mim</a>
-                        <a href="">Tabela</a>
-                        <a href="">Agendamento</a>
-                        <a href="">Contato</a>
-                </div>
-                <a href="" className={styles.Custom_Buttom}>Agendar Horarios &gt;</a>
-            </div>
-        </header>
-    </>
+            </header>
+        </>
     )
 }
 

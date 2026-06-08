@@ -1,3 +1,6 @@
+/* =========================================
+   BASE (Seu código original)
+   ========================================= */
 .sectionContainer {
     background-color: rgb(8, 8, 8);
     min-height: 100vh; 
@@ -22,13 +25,12 @@
     max-width: 600px;
     display: flex;
     justify-content: center;
-    
-    
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.6);
     border-radius: 8px; 
     overflow: hidden;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
+
 .imageWrapper:hover{
     transform: translateY(-8px);
 }
@@ -37,4 +39,19 @@
     width: 100%;
     height: auto; 
     display: block;
+}
+
+/* =========================================
+   RESPONSIVIDADE (Celulares e Tablets menores)
+   ========================================= */
+@media (max-width: 768px) {
+    .sectionContainer {
+        min-height: auto; 
+        padding: 40px 15px; 
+    }
+
+    .h1 {
+        font-size: 32px;
+        margin: 0 0 25px 0; 
+    }
 }

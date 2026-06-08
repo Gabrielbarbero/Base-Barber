@@ -1,65 +1,143 @@
-.startDiv{
+/* =========================================
+   BASE - DESKTOP (Telas grandes)
+   ========================================= */
+.startDiv {
     display: flex;
     flex-direction: row;
+    justify-content: space-between; /* Empurra o título pra esquerda e o link pra direita */
+    align-items: flex-end; /* Alinha ambos pela base do texto */
     margin-top: 0;
+    padding: 40px 8%; /* Centraliza o conteúdo pareado com a largura do grid de fotos */
     background-color: rgb(8, 8, 8);
+    box-sizing: border-box;
 }
-.Title{
-    width: 85vw;
-    padding: 30px;
 
+.Title {
+    /* Removido o 85vw para não esmagar os outros itens */
+    max-width: 70%; 
 }
-.h3{
+
+.h3 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 20px;
     letter-spacing: 0.2em;
     color: rgb(187, 174, 0);
     margin: 0;
 }
-.h2{
+
+.h2 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 35px;
     letter-spacing: -0.1em;
     color: rgb(255, 255, 255);
+    margin: 5px 0 0 0; /* Espaçamento leve entre o h3 e h2 */
+}
 
+.hourWorks {
+    /* Removido o flex e padding exagerado, o startDiv já organiza isso */
+    margin-bottom: 5px; 
 }
-.hourWorks{
-    padding: 35px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-}
-.hourLink{
+
+.hourLink {
     white-space: nowrap;
     text-decoration: none;
     font-size: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
     color: rgb(187, 174, 0);
-
+    transition: all 0.3s ease;
 }
 
-/* photos*/
-.cardsContainer{
-    padding: 30px;
+.hourLink:hover {
+    color: rgb(255, 255, 255); /* Efeitinho extra pro link */
+}
+
+/* =========================================
+   PHOTOS - GALERIA
+   ========================================= */
+.cardsContainer {
+    padding: 20px 0 50px 0;
     display: flex;
     justify-content: center;
     width: 100%;
     background-color: rgb(8, 8, 8);
-
+    box-sizing: border-box;
 }
-.cards{
+
+.cards {
     display: grid;
-    padding-bottom: 50px;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr); /* 3 Colunas no PC */
+    gap: 30px; /* Adicionado GAP para separar as imagens sem precisar de margin */
     width: 84%;
 }
-.cards img{
-    width: 350px;
-    height: 450px;
+
+.cards img {
+    width: 100%; /* A imagem preenche 100% da coluna do grid */
+    height: 450px; /* Mantém o aspecto de retrato (vertical) */
     object-fit: cover;
     border-radius: 5px;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
 }
-.cards img:hover{
-    transform: scale(1.01);
+
+.cards img:hover {
+    transform: scale(1.02); /* Aumentado sutilmente pra 1.02 pra ficar mais visível */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra bacana no hover */
+}
+
+
+/* =========================================
+   ESTÁGIO 1: TABLETS (Entre 769px e 1100px)
+   ========================================= */
+@media (max-width: 1100px) {
+    .h2 {
+        font-size: 30px;
+    }
+    
+    .cards {
+        grid-template-columns: repeat(2, 1fr); /* Cai para 2 colunas */
+        gap: 20px;
+    }
+    
+    .cards img {
+        height: 400px; /* Reduz um pouco a altura para não ficar muito gigante */
+    }
+}
+
+
+/* =========================================
+   ESTÁGIO 2: CELULARES (Até 768px)
+   ========================================= */
+@media (max-width: 768px) {
+    .startDiv {
+        flex-direction: column; /* Empilha Título e Link */
+        align-items: flex-start; /* Alinha tudo à esquerda */
+        padding: 30px 8%; 
+        gap: 15px; /* Espaço entre o título e o link */
+    }
+
+    .Title {
+        max-width: 100%; 
+    }
+
+    .h2 {
+        font-size: 26px;
+    }
+
+    .h3 {
+        font-size: 16px;
+    }
+
+    .hourLink {
+        font-size: 18px;
+        padding: 10px 0; /* Aumenta a área de clique pro dedo */
+    }
+
+    .cards {
+        grid-template-columns: 1fr; /* Cai para 1 única coluna (uma foto embaixo da outra) */
+        gap: 25px;
+        width: 90%; /* Deixa a foto um pouco mais larga no celular */
+    }
+
+    .cards img {
+        height: 350px; /* Achata a imagem para caber inteira na tela sem tanto scroll */
+    }
 }

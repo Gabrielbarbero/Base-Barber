@@ -175,3 +175,39 @@
     padding: 7px;
     filter: invert(100);
 }
+
+
+/* =========================================
+   RESPONSIVIDADE (Tablets e Celulares)
+   ========================================= */
+@media (max-width: 1100px) {
+    .SectionContact {
+        padding: 40px 20px; /* Reduz a margem gigante nas laterais da tela inteira */
+    }
+
+    .divMaster {
+        flex-direction: column; /* A MÁGICA: Empilha o lado esquerdo em cima do direito */
+        gap: 40px; /* Dá um respiro entre a lista e a caixa de agendar */
+    }
+
+    .divSeparation {
+        width: 100%; /* Cada bloco agora ocupa a tela toda */
+        padding: 0; /* Remove os 30px de padding originais que espremiam o conteúdo no celular */
+    }
+
+    .divLinks {
+        padding: 40px 0 0 0; /* Ajusta o alinhamento da divLinks */
+        justify-content: center; /* Centraliza os botões do Zap e Insta no mobile */
+        flex-wrap: wrap; /* Permite que os botões caiam de linha se não couberem */
+    }
+
+    /* Trava os tamanhos de fonte dos botões usando rem, 
+       o vmin costuma distorcer botões no celular */
+    .customButtom {
+        font-size: 1.2rem;
+    }
+
+    .socialMedias {
+        font-size: 1rem;
+    }
+}
