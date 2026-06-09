@@ -11,7 +11,7 @@ const photos = [
 
 function Works() {
     return (
-        <section>
+        <section id='Works'>
             <div className={styles.startDiv}>
                 <div className={styles.Title}>
                     <h3 className={styles.h3}>Meus Trabalhos</h3>

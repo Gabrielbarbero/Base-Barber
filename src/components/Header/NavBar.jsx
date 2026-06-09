@@ -2,11 +2,11 @@ import styles from './NavBar.module.css'
 
 // 1. Array de dados: todos os seus links organizados aqui fora
 const navLinks = [
-    { id: 'trabalhos', label: 'Trabalhos', url: '#trabalhos' },
-    { id: 'sobre', label: 'Sobre Mim', url: '#sobre' },
-    { id: 'tabela', label: 'Tabela', url: '#tabela' },
-    { id: 'agendamento', label: 'Agendamento', url: '#agendamento' },
-    { id: 'contato', label: 'Contato', url: '#contato' }
+    { id: 'trabalhos', label: 'Trabalhos', url: '#Works' },
+    { id: 'sobre', label: 'Sobre Mim', url: '#Description' },
+    { id: 'tabela', label: 'Tabela', url: '#Tabela' },
+    { id: 'agendamento', label: 'Agendamento', url: '#Address' },
+    { id: 'contato', label: 'Contato', url: '#Contact' }
 ];
 
 function NavBar() {

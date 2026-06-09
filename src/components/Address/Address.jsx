@@ -39,8 +39,8 @@ function Adress() {
     const InstagramIcon = 'https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/black-instagram-icon.png';
 
     return (
-        <section className={styles.SectionContact}>
-            <div className={styles.divMaster}>
+        <section className={styles.SectionContact}  id='Address'>
+            <div className={styles.divMaster} id='Contact'>
                 
                 {/* Contatos renderizados com .map() */}
                 <div className={styles.divSeparation}>

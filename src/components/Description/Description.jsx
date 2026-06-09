@@ -6,7 +6,7 @@ function Description(){
 
     return(
         <>
-        <section className={styles.sectionContainer}>
+        <section className={styles.sectionContainer} id='Description'>
             <div className={styles.organization}>
                 <div className={styles.separation}>
                     <img src={imgPhoto} alt="" className={styles.photo} /> 
