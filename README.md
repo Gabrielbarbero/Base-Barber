@@ -1,16 +1,31 @@
-# React + Vite
+# ✂️ Base Barber - Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Uma landing page moderna, responsiva e de alto padrão desenvolvida para uma barbearia, com foco em uma experiência de usuário (UX) premium. O projeto adota uma estética *dark mode* refinada, utilizando uma paleta de cores sofisticada para destacar a marca e atrair clientes.
 
-Currently, two official plugins are available:
+Este projeto foi inicialmente idealizado como um trabalho freelancer e posteriormente adaptado para integrar meu portfólio pessoal de desenvolvimento front-end.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Funcionalidades
 
-## React Compiler
+* **Design Dark & Premium:** Layout minimalista projetado com tons escuros profundos e acentos metálicos, transmitindo elegância e profissionalismo.
+* **Navegação Fluida:** Estrutura de página única (Single Page) com seções bem definidas: Trabalhos, Sobre Mim, Tabela de Preços, Agendamento e Contato.
+* **Componentização Avançada:** Interface totalmente construída utilizando **React**, garantindo reutilização de código e excelente performance.
+* **Tabela de Serviços Dinâmica:** Apresentação clara dos serviços oferecidos e seus respectivos valores.
+* **Foco em Conversão (CTA):** Botões de chamada para ação estratégicos para direcionar o usuário para o agendamento de horários.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tecnologias Utilizadas
 
-## Expanding the ESLint configuration
+* **React** (Biblioteca principal para construção da interface e componentes)
+* **JavaScript** (Lógica de programação)
+* **CSS3 / Styled Components** (Para estilização e consistência visual do tema escuro)
+* **HTML5** (Estruturação semântica)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📸 Preview
+
+<img src="https://res-console.cloudinary.com/df39h99li/thumbnails/v1/image/upload/v1782187107/MjAyNi0wNi0yMzAwLTM4LTU3LWV6Z2lmLmNvbS12aWRlby10by1naWYtY29udmVydGVyX3FhZmRwbA==/preview" width="800" alt="Preview da Barbearia">
+## ⚙️ Como rodar o projeto localmente
+
+Siga as instruções abaixo para clonar o repositório e executar o projeto na sua máquina:
+
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/seu-usuario/nome-do-repositorio.git
