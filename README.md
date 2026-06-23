@@ -21,7 +21,8 @@ Este projeto foi inicialmente idealizado como um trabalho freelancer e posterior
 
 ## 📸 Preview
 
-<img src="https://res-console.cloudinary.com/df39h99li/thumbnails/v1/image/upload/v1782187107/MjAyNi0wNi0yMzAwLTM4LTU3LWV6Z2lmLmNvbS12aWRlby10by1naWYtY29udmVydGVyX3FhZmRwbA==/preview" width="800" alt="Preview da Barbearia">
+![Preview da Barbearia](./BaseBarber.gif)
+
 ## ⚙️ Como rodar o projeto localmente
 
 Siga as instruções abaixo para clonar o repositório e executar o projeto na sua máquina:
