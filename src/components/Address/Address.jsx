@@ -1,17 +1,18 @@
 import styles from './Adress.module.css'
 
-export const Tesoura = 'https://img.icons8.com/?size=100&id=15ugJLhHdnQd&format=png&color=FFFFFF'
+// Usei o ícone da tesoura branco igual ao seu original (?color=white)
+export const Tesoura = 'https://api.iconify.design/ph/scissors.svg?color=white'
 
 const contactInfo = [
     {
         id: 'endereco',
-        icon: 'https://www.freeiconspng.com/uploads/maps-icon-16.png',
+        icon: 'https://api.iconify.design/ph/map-pin.svg?color=black',
         title: 'Endereço',
         lines: ['Rua XXXXXX, 999', 'XXXXXXX, XX']
     },
     {
         id: 'horarios',
-        icon: 'https://www.freeiconspng.com/uploads/clock-png-10.png',
+        icon: 'https://api.iconify.design/ph/clock.svg?color=black',
         title: 'Horários',
         lines: [
             'Segunda a Sexta -- 09h às 20h', 
@@ -22,21 +23,22 @@ const contactInfo = [
     },
     {
         id: 'whatsapp',
-        icon: 'https://www.freeiconspng.com/uploads/the-phone-icon-has-now-grown-to-a-similar-status-how-many-phones-have--1.png',
+        icon: 'https://api.iconify.design/ph/whatsapp-logo.svg?color=black',
         title: 'Whatsapp',
         lines: ['(XX)XXXXX-XXXX']
     },
     {
         id: 'instagram',
-        icon: 'https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/black-instagram-icon.png',
+        icon: 'https://api.iconify.design/ph/instagram-logo.svg?color=black',
         title: 'Instagram',
         lines: ['@XXXXXX']
     }
 ];
 
 function Adress() {
-    const WhatsappIcon = 'https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/whatsapp-icon.png';
-    const InstagramIcon = 'https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/black-instagram-icon.png';
+    // Links consistentes para os botões do rodapé
+    const WhatsappIcon = 'https://api.iconify.design/ph/whatsapp-logo.svg?color=black';
+    const InstagramIcon = 'https://api.iconify.design/ph/instagram-logo.svg?color=black';
 
     return (
         <section className={styles.SectionContact}  id='Address'>
@@ -64,7 +66,7 @@ function Adress() {
                     ))}
                 </div>
 
-                {/*Card de Agendamento */}
+                {/* Card de Agendamento */}
                 <div className={styles.divSeparation}>
                     <div className={styles.backgroundDiv}>
                         <div className={styles.imageBackground}>

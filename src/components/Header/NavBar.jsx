@@ -10,7 +10,7 @@ const navLinks = [
 ];
 
 function NavBar() {
-    const logo = 'https://img.icons8.com/?size=100&id=15ugJLhHdnQd&format=png&color=FFFFFF'
+    const logo = 'https://api.iconify.design/ph/scissors.svg?color=white'
     
     return (
         <>
@@ -20,8 +20,8 @@ function NavBar() {
                     {/* Bloco da Logo e Títulos */}
                     <div className={styles.text_NavBar}>
                         <img src={logo} alt="logo" className={styles.logo}/>
-                        <h1 className={styles.title_NavBar}>Barbearia</h1>
-                        <h1 className={styles.subtitle_NavBar}>ABY</h1>
+                        <h1 className={styles.title_NavBar}>Base</h1>
+                        <h1 className={styles.subtitle_NavBar}>Barber</h1>
                     </div>
                     
                     {/* 2. O .map() em ação substituindo as repetições */}
