@@ -47,18 +47,27 @@
     background: var(--accent);
 }
 
-/* CARDS */
+/* CARDS: Tamanho físico ajustável para não cortar conteúdo */
 .card {
     flex: 0 0 auto; 
     position: relative;
-    width: 260px;
+    width: 260px; /* Largura inicial Mobile */
     background: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: 8px;
     overflow: hidden;
-    transition: .3s;
+    transition: width 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease;
 }
-.card:hover { box-shadow: 0 8px 20px rgba(0,0,0,.5); }
+
+.card:hover { 
+    width: 320px; /* Cresce fisicamente no Mobile */
+    box-shadow: 0 15px 30px rgba(0,0,0,.7); 
+}
+
+.card:active {
+    width: 310px; /* Leve recuo ao clicar */
+    box-shadow: 0 8px 20px rgba(0,0,0,.5);
+}
 
 .card > button {
     display: flex;
@@ -73,13 +82,21 @@
 }
 .card > button:hover { background: rgba(187,174,0,.05); }
 
-/* TEXTOS E IMAGENS DO CARD */
+/* IMAGENS COM ZOOM HARMONIOSO */
 .card img, .navOpen img {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 15px;
+    transition: width 0.3s ease, height 0.3s ease;
 }
-.card img { width: 110px; height: 110px; border: 2px solid var(--accent); padding: 3px; }
+.card img { 
+    width: 110px; height: 110px; 
+    border: 2px solid var(--accent); padding: 3px; 
+}
+.card:hover img {
+    width: 130px; height: 130px; 
+}
+
 .card h1 { margin-bottom: 5px; color: var(--text-white); font: bold 1.4rem var(--font-body); }
 .card p { margin: 0; color: var(--text-grey); font: 1rem var(--font-body); }
 
@@ -87,17 +104,19 @@
 .navClosed { display: none; }
 .navOpen {
     position: absolute;
-    inset: 0; /* Substitui top, left, width e height */
+    inset: 0; 
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
     background: rgba(0,0,0,.95);
     padding: 50px 20px 20px;
     text-align: center; z-index: 10;
     animation: fadeIn .3s ease-in-out;
     overflow-y: auto;
 }
-.navOpen img { width: 90px; height: 90px; flex-shrink: 0; }
+
+.navOpen img { width: 90px; height: 90px; flex-shrink: 0; border: 2px solid var(--accent); padding: 3px; }
 .navOpen h1 { color: var(--accent); font-size: 1.3rem; margin-bottom: 5px; }
 
 .closeBtn {
@@ -120,18 +139,27 @@
     to { opacity: 1; transform: scale(1); }
 }
 
-/* RESPONSIVIDADE */
+/* RESPONSIVIDADE: Ajuste automático das larguras para PC e Tablet */
 @media (min-width: 769px) {
     .wrapper { padding: 50px 30px; }
     .sectionTitle { font-size: 40px; margin-bottom: 40px; }
     .cardsRow { gap: 25px; }
+    
     .card { width: 280px; }
+    .card:hover { width: 340px; }
+    .card:active { width: 330px; }
+    
     .card img { width: 130px; height: 130px; }
+    .card:hover img { width: 150px; height: 150px; }
 }
 
 @media (min-width: 1101px) {
     .sectionTitle { font-size: 50px; }
     .cardsRow { justify-content: center; gap: 30px; }
+    
     .card { width: 300px; }
+    .card:hover { width: 360px; }
+    .card:active { width: 350px; }
+    
     .card h1 { font-size: 1.6rem; }
 }

@@ -25,7 +25,7 @@ const profiDesc = [
     },
 ]
 
-function Scroll_Description(){
+function Scroll_Description() {
     const [openMenu, setOpenMenu] = useState(null); 
     const descRef = useRef(null)
     const buttonRef = useRef(null)
@@ -83,7 +83,7 @@ function Scroll_Description(){
                                 <img src={desc.photo} alt={`Foto de ${desc.name}`} />
                             </div>
                             <div><h1>{desc.name}</h1></div>
-                            <div><p className={styles.expText}>Experiência: {desc.experience}</p></div>
+                            <div><p className={styles.expText}>{desc.experience}</p></div>
                             <div><p className={styles.descText}>{desc.Description}</p></div>
                         </nav>
                     </div>
