@@ -10,15 +10,19 @@ import Description from './components/Description/Description'
 import Tabela from './components/Tabela/Tabela'
 import Adress from './components/Address/Address'
 import Footer from './components/Footer/Footer'
+import SideBar from './components/SideBar/SideBar'
+import Scroll_Description from './components/Scroll_Description/Scroll_Description'
 function App() {
   const [count, setCount] = useState(0)
   return (
     <div>
+      <SideBar/>
       <NavBar/>
       <ScrollingScreen/>
       <Statistic/>
       <Works/>
       <Description/>
+      <Scroll_Description/>
       <Tabela/>
       <Adress/>
       <Footer/>

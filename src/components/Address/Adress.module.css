@@ -1,79 +1,114 @@
+/* =========================================
+   ESTRUTURA BASE (MOBILE-FIRST)
+   ========================================= */
 .SectionContact {
-    padding: 50px;
-    background-color: rgb(8, 8, 8);
+    /* Cores */
+    --bg-main: rgb(8, 8, 8);
+    --bg-card: rgb(17, 17, 17);
+    --accent: rgb(187, 174, 0);
+    --accent-hover: rgb(177, 165, 0);
+    --accent-dark: rgb(70, 65, 0);
+    --text-white: rgb(255, 255, 255);
+    --text-grey: rgb(99, 99, 99);
+    --text-dark: rgba(0, 0, 0, 0.77);
+    --border-light: rgb(65, 65, 65);
+    --border-dark: rgb(48, 48, 48);
+    --black: rgb(0, 0, 0);
+
+    /* Fontes */
+    --font-title: Verdana, Geneva, Tahoma, sans-serif;
+    --font-subtitle: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', sans-serif;
+    --font-body: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    /* Filtros SVG e Sombras */
+    --filter-accent: brightness(0) saturate(100%) invert(67%) sepia(85%) saturate(459%) hue-rotate(18deg) brightness(98%) contrast(102%);
+    --filter-white: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(100%) hue-rotate(0deg) brightness(100%) contrast(100%);
+    --shadow-accent: 0px 0px 25px var(--accent);
+
+    padding: 40px 20px;
+    background-color: var(--bg-main);
 }
 
 .divMaster {
     display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
 .divSeparation {
-    width: 50%;
-    padding: 30px;
+    width: 100%;
 }
 
+/* Tipografia */
 .subtitle {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 20px;
+    margin: 0;
+    color: var(--accent);
+    font: 20px var(--font-subtitle);
     letter-spacing: 0.2em;
-    color: rgb(187, 174, 0);
-    margin: 0;
 }
 
-.title {
-    margin: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 35px;
+.title, .titleOuterColor {
+    margin: 0 0 30px 0;
+    font: 35px var(--font-title);
     letter-spacing: -0.1em;
-    color: rgb(255, 255, 255);
-    margin-bottom: 30px;
 }
 
-.titleOuter{
+.title { color: var(--text-white); }
+.titleOuterColor { color: var(--accent); }
+
+.titleOuter {
     margin: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 35px;
+    color: var(--text-white);
+    font: 35px var(--font-title);
     letter-spacing: -0.1em;
-    color: rgb(255, 255, 255);
-}
-.titleOuterColor{
-    margin: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 35px;
-    letter-spacing: -0.1em;
-    color: rgb(187, 174, 0);
-    margin-bottom: 30px;
 }
 
 .pTitle {
     margin: 0;
-    font-size: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: rgb(255, 255, 255);
+    color: var(--text-white);
+    font: 20px var(--font-body);
 }
 
 .pDescription {
     margin: 0;
-    font-size: 15px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: rgb(99, 99, 99);
+    color: var(--text-grey);
+    font: 15px var(--font-body);
     letter-spacing: 0.05em;
 }
 
+/* Imagens e Ícones */
 .Images {
     width: 30px;
     height: 30px;
     flex-shrink: 0;
     padding: 7px;
-    filter: brightness(0) saturate(100%) invert(67%) sepia(85%) saturate(459%) hue-rotate(18deg) brightness(98%) contrast(102%);
+    filter: var(--filter-accent);
 }
-.imageBackground{
+
+.imageBackground {
     width: 45px;
     height: 45px;
-    background-color: rgb(70, 65, 0);
+    background-color: var(--accent-dark);
     border-radius: 5px;
 }
 
+.linkImage {
+    width: 15px;
+    height: 15px;
+    padding: 7px;
+    filter: var(--filter-white);
+    transition: filter 0.3s ease;
+}
+
+.imageButtom {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    padding: 7px;
+    filter: invert(100%);
+}
+
+/* Blocos de Informação e Containers */
 .infoItem {
     display: flex;
     align-items: flex-start; 
@@ -86,128 +121,108 @@
     flex-direction: column;
     gap: 4px;
 }
-.socialMedias{
+
+.backgroundDiv {
+    padding: 15px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-dark);
+    border-radius: 5px;
+}
+
+/* Redes Sociais e Links */
+.divLinks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 40px 0 0 0;
+}
+
+.socialMedias {
     display: flex;
     align-items: center;
     justify-content: center;
-    text-decoration: none;
-    font-size: 3vmin;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
-    margin-right: 0.8vw;
     padding: 10px;
+    color: var(--text-white);
+    background-color: var(--black);
+    border: 1px solid var(--border-light);
     border-radius: 2px;
-    border: 1px solid rgb(65, 65, 65);
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-    transition: all 0.3s ease;
-}
-.socialMedias:hover{
-    border: 1px solid rgb(187, 174, 0);
-    color: rgb(187, 174, 0);
-}
-.divLinks{
-    display: flex;
-    justify-content: start;
-    padding: 0 50px 50px 30px;
-    gap: 15px;
-}
-.linkImage{
-    width: 15px;
-    height: 15px;
-    padding: 7px;
-    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(100%) hue-rotate(0deg) brightness(100%) contrast(100%);
-    transition: all 0.3s ease;
+    font: 1rem var(--font-body);
+    text-decoration: none;
+    transition: border-color 0.3s ease, color 0.3s ease;
 }
 
-.socialMedias:hover .linkImage{
-    filter: brightness(0) saturate(100%) invert(67%) sepia(85%) saturate(459%) hue-rotate(18deg) brightness(98%) contrast(102%);
-
+.socialMedias:hover {
+    border-color: var(--accent);
+    color: var(--accent);
 }
 
-.backgroundDiv{
-    border-radius: 5px;
-    border: 1px solid rgb(48, 48, 48);
-    padding: 15px;
-    background-color: rgb(17, 17, 17);
+.socialMedias:hover .linkImage {
+    filter: var(--filter-accent);
 }
+
+/* Botões Customizados */
 .customButtom {
-
+    box-sizing: border-box; 
     display: flex; 
     align-items: center;
     justify-content: center;
-    
     width: 100%;
     height: 50px;
-    text-decoration: none;
-    font-size: 4vmin;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: bold;
-
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin: 15px 0;
+    color: var(--text-dark);
+    background-color: var(--accent);
     border-radius: 2px;
-    background-color: rgb(187, 174, 0);
-    color: rgba(0, 0, 0, 0.774);
-
-    box-sizing: border-box; 
-
-    box-shadow: 0px 0px 25px rgb(187, 174, 0);
-    transition: all 0.3s ease;
+    box-shadow: var(--shadow-accent);
+    font: bold 1.2rem var(--font-body);
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
-.customButtom:hover{
-    background-color: rgb(177, 165, 0);
+
+.customButtom:hover {
+    background-color: var(--accent-hover);
 }
+
 .tinyWords {
     display: flex;
     justify-content: center;
     width: 100%;
     margin: 0;
-    font-size: 12px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: rgb(99, 99, 99);
+    color: var(--text-grey);
+    font: 12px var(--font-body);
     letter-spacing: 0.05em;
 }
-.imageButtom{
-    width: 30px;
-    height: 30px;
-    flex-shrink: 0;
-    padding: 7px;
-    filter: invert(100);
-}
-
 
 /* =========================================
-   RESPONSIVIDADE (Tablets e Celulares)
+   RESPONSIVIDADE (Telas Grandes / PC)
    ========================================= */
-@media (max-width: 1100px) {
+@media (min-width: 769px) {
     .SectionContact {
-        padding: 40px 20px; /* Reduz a margem gigante nas laterais da tela inteira */
+        padding: 50px;
     }
 
     .divMaster {
-        flex-direction: column; /* A MÁGICA: Empilha o lado esquerdo em cima do direito */
-        gap: 40px; /* Dá um respiro entre a lista e a caixa de agendar */
+        flex-direction: row;
+        gap: 0;
     }
 
     .divSeparation {
-        width: 100%; /* Cada bloco agora ocupa a tela toda */
-        padding: 0; /* Remove os 30px de padding originais que espremiam o conteúdo no celular */
+        width: 50%;
+        padding: 30px;
     }
 
     .divLinks {
-        padding: 40px 0 0 0; /* Ajusta o alinhamento da divLinks */
-        justify-content: center; /* Centraliza os botões do Zap e Insta no mobile */
-        flex-wrap: wrap; /* Permite que os botões caiam de linha se não couberem */
-    }
-
-    /* Trava os tamanhos de fonte dos botões usando rem, 
-       o vmin costuma distorcer botões no celular */
-    .customButtom {
-        font-size: 1.2rem;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        padding: 0 50px 50px 30px;
     }
 
     .socialMedias {
-        font-size: 1rem;
+        margin-right: 0.8vw;
+        font-size: 3vmin;
+    }
+
+    .customButtom {
+        font-size: 4vmin;
     }
 }

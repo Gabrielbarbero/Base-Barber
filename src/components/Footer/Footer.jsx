@@ -9,7 +9,7 @@ return(
                 <div className={styles.footerImageBackground} >
                 <img src={Tesoura} alt="" className={styles.footerImage} />
                 </div>
-                <p className={styles.footerDescription}>Barbearia ABY © 2026 · Todos os direitos reservados</p>
+                <p className={styles.footerDescription}>Base Barber © 2026 · Todos os direitos reservados</p>
             </div>
         </div>
         <div className={styles.footerContainerLink}>

@@ -1,179 +1,153 @@
-/* =========================================
-   BASE - DESKTOP (Telas grandes)
-   ========================================= */
 .Header {
-    background-color: rgb(75, 75, 75);
-    height: 10vh; 
+    --bg-header: rgb(75, 75, 75);
+    --bg-nav-mobile: rgba(0, 0, 0, 0.904);
+    --bg-nav-desktop: rgba(0, 0, 0, 0.774);
+    --text-white: rgb(255, 255, 255);
+    --text-dark: rgba(0, 0, 0, 0.774);
+    --accent: rgb(187, 174, 0);
+    --font-body: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
     width: 100%;
+    height: 10vh; 
+    background-color: var(--bg-header);
 }
 
 .NavBar {
+    box-sizing: border-box;
     position: fixed; 
     top: 0; 
+    z-index: 9999;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: space-evenly; 
     align-items: center;
-    justify-content: space-between; 
     width: 100%;
     height: 10vh; 
-    background-color: rgba(0, 0, 0, 0.774); 
-    padding: 0 2vw; 
-    box-sizing: border-box;
-    z-index: 9999;
-    gap: 20px; 
+    background-color: var(--bg-nav-mobile); 
 }
-
+.mobile_NavBar{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.title_NavBar_Mobile{
+    color: var(--text-white);
+    font: bold 1.4rem var(--font-body);
+}
+.subtitle_NavBar_Mobile{
+    margin-left: 10px;
+    color: var(--accent);
+    font: bold 1.4rem var(--font-body);
+}
 .text_NavBar {
     display: flex;
-    flex-direction: row;
     align-items: center;
+    justify-content: center;
+    width: 100%;
+    display: none;
 }
 
 .logo {
-    height: calc(10vh - 20px); /* acompanha a NavBar de 10vh */
-    width: auto;               /* proporção automática */
-    max-height: 55px;          /* teto para telas grandes */
-    aspect-ratio: 1 / 1;       /* garante quadrado perfeito */
-    object-fit: contain;
+    box-sizing: border-box;
+    width: cover;
+    height: calc(35vh - 30px);
+    max-height: 55px;
+    aspect-ratio: 1 / 1; 
+    margin-right: 15px;
     padding: 1px;
-    margin-right: 0.8vw;
-    border: 3px solid rgb(255, 255, 255);
     border-radius: 12px;
-    box-sizing: border-box;    /* padding não estoura o tamanho */
+    object-fit: contain;
+}
+
+.logo_Mobile{
+    box-sizing: border-box;
+    width: 10vw;
+    height: calc(35vh - 30px);
+    max-height: 55px;
+    aspect-ratio: 1 / 1; 
+    margin-right: 15px;
+    border-radius: 12px;
+    object-fit: contain;
 }
 
 .title_NavBar {
-    color: rgb(255, 255, 255);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: var(--text-white);
+    font: 1.4rem var(--font-body);
 }
 
 .subtitle_NavBar {
-    color: rgb(187, 174, 0);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 4.5vmin; 
     margin-left: 10px;
+    color: var(--accent);
+    font: 1.4rem var(--font-body);
 }
 
 .Connect_NavBar {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap; 
     align-items: center;
-    gap: 20px;
+    justify-content: center;
+    width: 100%;
+    gap: 12px;
+    display: none;
 }
 
 .Connect_NavBar a {
-    color: rgb(255, 255, 255);
+    color: var(--text-white);
+    font: 1.1rem var(--font-body);
     text-decoration: none;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 2.5vmin;
     white-space: nowrap;
-    transition: all 0.3s ease; 
+    transition: color 0.3s ease, transform 0.3s ease; 
 }
 
 .Connect_NavBar a:hover {
-    color: rgb(187, 174, 0);
+    color: var(--accent);
     transform: scale(1.05); 
 }
 
 .Custom_Buttom {
-    text-decoration: none;
-    font-size: 3vmin;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: bold;
-    padding: 10px;
+    box-sizing: border-box;
+    display: block; 
+    width: 100%; 
+    max-width: 400px; 
+    padding: 12px; 
+    color: var(--text-dark);
+    background-color: var(--accent);
     border-radius: 2px;
-    background-color: rgb(187, 174, 0);
-    color: rgba(0, 0, 0, 0.774);
+    font: bold 1.1rem var(--font-body);
+    text-align: center;
+    text-decoration: none;
     white-space: nowrap;
+    display: none;
 }
 
-/* =========================================
-   ESTÁGIO 1: TABLETS (Entre 769px e 1100px)
-   ========================================= */
-@media (max-width: 1100px) {
-    
-    .Header {
-        height: 25vh;
-    }
-
-    .NavBar {
-        background-color: rgba(0, 0, 0, 0.904); 
-        height: 25vh; 
-        flex-direction: column; 
-        justify-content: space-evenly; 
-        padding: 2vh 5vw; 
-        gap: 0; 
-    }
-
-    .text_NavBar {
-        width: 100%;
-        justify-content: center; 
-    }
-
-    .logo {
-        height: calc(25vh - 30px); /* NavBar tablet = 25vh */
-        max-height: 60px;
-        margin-right: 15px;
-    }
-    .subtitle_NavBar, .title_NavBar {
-        font-size: 1.6rem; 
-    }
-
-    .Connect_NavBar {
-        width: 100%;
-        flex-wrap: wrap; 
-        justify-content: center;
-        gap: 20px;
-    }
-
-    .Connect_NavBar a {
-        font-size: 1.2rem; 
-    }
-
-    .Custom_Buttom {
-        display: block; 
-        width: 100%; 
-        max-width: 400px; 
-        text-align: center;
-        font-size: 1.3rem;
-        box-sizing: border-box;
-    }
+@media (min-width: 769px) {
+    .Header { height: 25vh; }
+    .NavBar { height: 25vh; padding: 2vh 5vw; }
+    .logo { height: calc(25vh - 30px); max-height: 60px; }
+    .title_NavBar, .subtitle_NavBar { font-size: 1.6rem; }
+    .Connect_NavBar { gap: 20px; display: inline-flex; }
+    .Connect_NavBar a { font-size: 1.2rem; }
+    .Custom_Buttom { padding: 10px; font-size: 1.3rem; display: block; }
 }
 
-/* =========================================
-   ESTÁGIO 2: CELULARES (Até 768px)
-   ========================================= */
-@media (max-width: 768px) {
-    
-    .Header {
-        height: 35vh; 
-    }
-
+@media (min-width: 1101px) {
+    .Header { height: 10vh; }
     .NavBar {
-        background-color: rgba(0, 0, 0, 0.904); 
-        height: 35vh; 
-        padding: 3vh 5vw; 
+        flex-direction: row;
+        justify-content: space-between; 
+        height: 10vh; 
+        padding: 0 2vw; 
+        gap: 20px; 
+        background-color: var(--bg-nav-desktop); 
     }
-
-    .logo {
-        height: calc(35vh - 30px); /* NavBar mobile = 35vh */
-        max-height: 55px;
-    }
-
-    .subtitle_NavBar, .title_NavBar {
-        font-size: 1.4rem; 
-    }
-
-    .Connect_NavBar {
-        gap: 12px; 
-    }
-
-    .Connect_NavBar a {
-        font-size: 1.1rem; 
-    }
-
-    .Custom_Buttom {
-        font-size: 1.1rem;
-        padding: 12px; 
-    }
+    .mobile_NavBar{ display: none; }
+    .text_NavBar { justify-content: flex-start; width: auto; display: inline-flex; }
+    .logo { height: calc(10vh - 20px); max-height: 55px; margin-right: 0.8vw; }
+    .title_NavBar { font: bold 1.8rem var(--font-body); }
+    .subtitle_NavBar { font: bold 4.5vmin var(--font-body); }
+    .Connect_NavBar { justify-content: flex-end; flex-wrap: nowrap; width: auto; display: inline-flex; }
+    .Connect_NavBar a { font-size: 2.5vmin; }
+    .Custom_Buttom { display: inline-block; width: auto; max-width: none; font-size: 3vmin; }
 }

@@ -1,143 +1,149 @@
 /* =========================================
-   BASE - DESKTOP (Telas grandes)
+   ESTRUTURA BASE (CELULARES - Até 768px)
    ========================================= */
+
+/* CABEÇALHO DA SESSÃO */
 .startDiv {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between; /* Empurra o título pra esquerda e o link pra direita */
-    align-items: flex-end; /* Alinha ambos pela base do texto */
-    margin-top: 0;
-    padding: 40px 8%; /* Centraliza o conteúdo pareado com a largura do grid de fotos */
-    background-color: rgb(8, 8, 8);
+    /* Variáveis do Componente */
+    --bg-main: rgb(8, 8, 8);
+    --accent: rgb(187, 174, 0);
+    --text-white: rgb(255, 255, 255);
+    --font-h2: Verdana, Geneva, Tahoma, sans-serif;
+    --font-h3: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', sans-serif;
+    --font-link: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 30px 8%;
+    background-color: var(--bg-main);
 }
 
 .Title {
-    /* Removido o 85vw para não esmagar os outros itens */
-    max-width: 70%; 
+    max-width: 100%; 
 }
 
 .h3 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 20px;
-    letter-spacing: 0.2em;
-    color: rgb(187, 174, 0);
     margin: 0;
+    color: var(--accent);
+    font: 16px var(--font-h3);
+    letter-spacing: 0.2em;
 }
 
 .h2 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 35px;
+    margin: 5px 0 0 0;
+    color: var(--text-white);
+    font: 26px var(--font-h2);
     letter-spacing: -0.1em;
-    color: rgb(255, 255, 255);
-    margin: 5px 0 0 0; /* Espaçamento leve entre o h3 e h2 */
 }
 
 .hourWorks {
-    /* Removido o flex e padding exagerado, o startDiv já organiza isso */
     margin-bottom: 5px; 
 }
 
 .hourLink {
-    white-space: nowrap;
+    padding: 10px 0; /* Aumenta a área de clique no mobile */
+    color: var(--accent);
+    font: 18px var(--font-link);
     text-decoration: none;
-    font-size: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
-    color: rgb(187, 174, 0);
-    transition: all 0.3s ease;
+    white-space: nowrap;
+    transition: color 0.3s ease;
 }
 
 .hourLink:hover {
-    color: rgb(255, 255, 255); /* Efeitinho extra pro link */
+    color: var(--text-white); 
 }
 
-/* =========================================
-   PHOTOS - GALERIA
-   ========================================= */
+/* GALERIA DE FOTOS */
 .cardsContainer {
-    padding: 20px 0 50px 0;
+    /* Repassando variáveis caso não estejam em um wrapper pai */
+    --bg-main: rgb(8, 8, 8);
+    --shadow-hover: 0 10px 20px rgba(0, 0, 0, 0.5);
+
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
     width: 100%;
-    background-color: rgb(8, 8, 8);
-    box-sizing: border-box;
+    padding: 20px 0 50px 0;
+    background-color: var(--bg-main);
 }
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 Colunas no PC */
-    gap: 30px; /* Adicionado GAP para separar as imagens sem precisar de margin */
-    width: 84%;
+    grid-template-columns: 1fr; /* 1 Coluna no Mobile */
+    gap: 25px;
+    width: 90%; 
 }
 
 .cards img {
-    width: 100%; /* A imagem preenche 100% da coluna do grid */
-    height: 450px; /* Mantém o aspecto de retrato (vertical) */
-    object-fit: cover;
+    width: 100%; 
+    height: 350px; /* Achata a imagem para não exigir muito scroll */
     border-radius: 5px;
-    transition: all 0.3s ease;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .cards img:hover {
-    transform: scale(1.02); /* Aumentado sutilmente pra 1.02 pra ficar mais visível */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra bacana no hover */
+    transform: scale(1.02); 
+    box-shadow: var(--shadow-hover);
 }
-
 
 /* =========================================
    ESTÁGIO 1: TABLETS (Entre 769px e 1100px)
    ========================================= */
-@media (max-width: 1100px) {
-    .h2 {
-        font-size: 30px;
-    }
-    
-    .cards {
-        grid-template-columns: repeat(2, 1fr); /* Cai para 2 colunas */
-        gap: 20px;
-    }
-    
-    .cards img {
-        height: 400px; /* Reduz um pouco a altura para não ficar muito gigante */
-    }
-}
-
-
-/* =========================================
-   ESTÁGIO 2: CELULARES (Até 768px)
-   ========================================= */
-@media (max-width: 768px) {
+@media (min-width: 769px) {
     .startDiv {
-        flex-direction: column; /* Empilha Título e Link */
-        align-items: flex-start; /* Alinha tudo à esquerda */
-        padding: 30px 8%; 
-        gap: 15px; /* Espaço entre o título e o link */
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 0;
+        padding: 40px 8%; 
     }
 
     .Title {
-        max-width: 100%; 
-    }
-
-    .h2 {
-        font-size: 26px;
+        max-width: 70%; 
     }
 
     .h3 {
-        font-size: 16px;
+        font-size: 20px;
+    }
+
+    .h2 {
+        font-size: 30px;
     }
 
     .hourLink {
-        font-size: 18px;
-        padding: 10px 0; /* Aumenta a área de clique pro dedo */
+        padding: 0;
+        font-size: 20px;
     }
 
     .cards {
-        grid-template-columns: 1fr; /* Cai para 1 única coluna (uma foto embaixo da outra) */
-        gap: 25px;
-        width: 90%; /* Deixa a foto um pouco mais larga no celular */
+        grid-template-columns: repeat(2, 1fr); /* 2 Colunas */
+        gap: 20px;
+        width: 84%;
     }
 
     .cards img {
-        height: 350px; /* Achata a imagem para caber inteira na tela sem tanto scroll */
+        height: 400px; 
+    }
+}
+
+/* =========================================
+   ESTÁGIO 2: DESKTOP / PC (A partir de 1101px)
+   ========================================= */
+@media (min-width: 1101px) {
+    .h2 {
+        font-size: 35px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(3, 1fr); /* 3 Colunas */
+        gap: 30px; 
+    }
+
+    .cards img {
+        height: 450px; /* Proporção ideal de retrato pro desktop */
     }
 }

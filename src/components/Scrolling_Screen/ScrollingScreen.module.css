@@ -1,12 +1,17 @@
 /* =========================================
-   BASE - DESKTOP (Telas grandes)
+   ESTRUTURA BASE (CELULARES - Até 768px)
    ========================================= */
 .CarouselContainer {
-    width: 100%;
-    height: 90vh; 
-    margin: 0 auto;
+    /* Variáveis do Componente */
+    --bg-btn: rgba(92, 92, 92, 0.34);
+    --bg-btn-hover: rgba(54, 54, 54, 0.5);
+    --shadow-color: rgb(0, 0, 0);
+
     position: relative; 
     overflow: hidden;
+    width: 100%;
+    height: 45vh;
+    margin: 0 auto;
 }
 
 .SliderTrack {
@@ -20,47 +25,48 @@
     flex: 0 0 100%;
     height: 100%;
     background-repeat: no-repeat;
-    background-size: cover;
     background-position: center;
+    background-size: cover;
+
     box-shadow: 
-        inset 0 100px 100px 0 rgb(0, 0, 0),    
-        inset 0 -100px 100px 0 rgb(0, 0, 0);
+        inset 0 40px 40px 0 var(--shadow-color),    
+        inset 0 -40px 40px 0 var(--shadow-color);
 }
 
 .Trade_Buttons {
     position: absolute; 
     top: 50%;
-    transform: translateY(-50%); 
-    border-radius: 50%;
-    border: 0;
     z-index: 10; 
-    width: 50px;
-    height: 50px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    background-color: rgba(92, 92, 92, 0.342);
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--bg-btn);
+    border: none;
+    border-radius: 50%;
     cursor: pointer;
-    transition: background-color 0.2s;
-}
-
-.leftBtn {
-    left: 20px;
-}
-
-.rightBtn {
-    right: 20px;
+    transform: translateY(-50%); 
+    transition: background-color 0.2s ease;
 }
 
 .Trade_Buttons:hover {
-    background-color: rgba(54, 54, 54, 0.5); 
+    background-color: var(--bg-btn-hover); 
+}
+
+.leftBtn {
+    left: 10px;
+}
+
+.rightBtn {
+    right: 10px;
 }
 
 .Seta {
     width: 50%;
     height: auto;
-    filter: invert(100%);
     opacity: 0.9;
+    filter: invert(100%);
 }
 
 .right {
@@ -70,44 +76,45 @@
 /* =========================================
    ESTÁGIO 1: TABLETS (Entre 769px e 1100px)
    ========================================= */
-@media (max-width: 1100px) {
+@media (min-width: 769px) {
     .CarouselContainer {
-        height: 60vh; /* Reduz a altura para a imagem não ficar tão esticada verticalmente */
+        height: 60vh; 
     }
 
     .Screen {
-        /* Diminui a área de sombra para não ofuscar a imagem numa tela mais estreita */
+
         box-shadow: 
-            inset 0 60px 60px 0 rgb(0, 0, 0),    
-            inset 0 -60px 60px 0 rgb(0, 0, 0);
+            inset 0 60px 60px 0 var(--shadow-color),    
+            inset 0 -60px 60px 0 var(--shadow-color);
+    }
+
+    .Trade_Buttons {
+        width: 50px; 
+        height: 50px;
+    }
+
+    .leftBtn {
+        left: 20px; 
+    }
+
+    .rightBtn {
+        right: 20px;
     }
 }
 
 /* =========================================
-   ESTÁGIO 2: CELULARES (Até 768px)
+   ESTÁGIO 2: DESKTOP / PC (A partir de 1101px)
    ========================================= */
-@media (max-width: 768px) {
+
+@media (min-width: 1101px) {
     .CarouselContainer {
-        height: 45vh; /* Carrossel fica mais contido, parecendo um banner widescreen */
+        height: 90vh; 
     }
 
     .Screen {
-        /* Sombra ainda mais sutil pro celular */
+
         box-shadow: 
-            inset 0 40px 40px 0 rgb(0, 0, 0),    
-            inset 0 -40px 40px 0 rgb(0, 0, 0);
-    }
-
-    .Trade_Buttons {
-        width: 40px;  /* Botões levemente menores */
-        height: 40px;
-    }
-
-    .leftBtn {
-        left: 10px; /* Cola mais na borda pra liberar espaço pro centro da imagem */
-    }
-
-    .rightBtn {
-        right: 10px;
+            inset 0 100px 100px 0 var(--shadow-color),    
+            inset 0 -100px 100px 0 var(--shadow-color);
     }
 }

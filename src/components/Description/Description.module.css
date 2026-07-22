@@ -1,82 +1,79 @@
 /* =========================================
-   BASE - DESKTOP E TABLETS (O seu código original)
+   ESTRUTURA BASE (MOBILE-FIRST)
    ========================================= */
 .sectionContainer {
-    background-color: rgb(8, 8, 8);
-    min-height: 700px;
-    padding: 50px;
+    --bg-main: rgb(8, 8, 8);
+    --accent: rgb(187, 174, 0);
+    --text-white: rgb(255, 255, 255);
+    --font-body: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    padding: 40px 20px;
+    background-color: var(--bg-main);
     box-sizing: border-box;
 }
 
 .h1 {
-    color: rgb(187, 174, 0);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin: 0;
+    margin: 0 0 15px 0;
+    color: var(--accent);
+    font-family: var(--font-body);
 }
 
 .organization {
-    width: 100%;
-    display: flex;
-}
-
-.separation {
-    width: 100%; 
-    padding-left: 0;
-    padding-right: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+}
+
+.separation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 .photo {
-    width: 80%;
-    height: 100%;
-    object-fit: cover;
+    width: 100%;
+    height: auto;
+    max-height: 350px;
+    margin-bottom: 20px;
     border-radius: 15px;
+    object-fit: cover;
 }
 
 .p {
-    width: 90%;
-    color: white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 20px;
-    margin-bottom: 20px;
-    letter-spacing: 0.1em;
+    width: 100%;
+    margin: 0 0 20px 0;
+    color: var(--text-white);
+    font: 16px var(--font-body);
+    text-align: justify;
 }
 
 /* =========================================
-   ESTÁGIO ÚNICO: CELULARES (Até 768px)
+   RESPONSIVIDADE (Telas Grandes / PC)
    ========================================= */
-@media (max-width: 768px) {
+@media (min-width: 769px) {
     .sectionContainer {
-        min-height: auto; 
+        min-height: 700px;
+        padding: 50px;
     }
 
     .organization {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .separation {
-        width: 100%; 
-        padding-left: 0;
-        padding-right: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center; 
+        flex-direction: row;
+        align-items: normal; 
     }
 
     .photo {
-        width: 100%;
-        height: auto; 
-        max-height: 350px; 
-        margin-bottom: 20px; 
+        width: 80%;
+        height: 100%;
+        max-height: none;
+        margin-bottom: 0;
     }
 
     .p {
-        width: 100%;
-        font-size: 16px;
-        text-align: justify; 
-        letter-spacing: 0; 
+        width: 90%;
+        font-size: 20px;
+        text-align: left; 
+        letter-spacing: 0.1em;
     }
 }

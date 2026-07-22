@@ -1,0 +1,137 @@
+.wrapper {
+    --bg-main: #080808;
+    --bg-card: #161616;
+    --accent: #bbae00;
+    --text-white: #fff;
+    --text-grey: #636363;
+    --border-color: #3b3b3b;
+    --font-body: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 15px;
+    background: var(--bg-main);
+}
+
+.sectionTitle {
+    margin-bottom: 30px;
+    color: var(--accent);
+    font: bold 32px var(--font-body);
+    text-align: center;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+}
+
+.cardsRow {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 20px;
+}
+
+/* SCROLLBARS OTIMIZADAS */
+.cardsRow::-webkit-scrollbar { height: 8px; }
+.navOpen::-webkit-scrollbar { width: 6px; }
+.cardsRow::-webkit-scrollbar-track { background: var(--bg-main); border-radius: 4px; }
+.navOpen::-webkit-scrollbar-track { background: transparent; }
+.cardsRow::-webkit-scrollbar-thumb, .navOpen::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 4px;
+}
+.cardsRow::-webkit-scrollbar-thumb { border: 2px solid var(--bg-main); }
+.cardsRow::-webkit-scrollbar-thumb:hover, .navOpen::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
+}
+
+/* CARDS */
+.card {
+    flex: 0 0 auto; 
+    position: relative;
+    width: 260px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: .3s;
+}
+.card:hover { box-shadow: 0 8px 20px rgba(0,0,0,.5); }
+
+.card > button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%; height: 100%;
+    padding: 30px 20px;
+    background: transparent;
+    border: none; cursor: pointer;
+    transition: .3s;
+}
+.card > button:hover { background: rgba(187,174,0,.05); }
+
+/* TEXTOS E IMAGENS DO CARD */
+.card img, .navOpen img {
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+.card img { width: 110px; height: 110px; border: 2px solid var(--accent); padding: 3px; }
+.card h1 { margin-bottom: 5px; color: var(--text-white); font: bold 1.4rem var(--font-body); }
+.card p { margin: 0; color: var(--text-grey); font: 1rem var(--font-body); }
+
+/* MENU EXPANDIDO (NAV) */
+.navClosed { display: none; }
+.navOpen {
+    position: absolute;
+    inset: 0; /* Substitui top, left, width e height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0,0,0,.95);
+    padding: 50px 20px 20px;
+    text-align: center; z-index: 10;
+    animation: fadeIn .3s ease-in-out;
+    overflow-y: auto;
+}
+.navOpen img { width: 90px; height: 90px; flex-shrink: 0; }
+.navOpen h1 { color: var(--accent); font-size: 1.3rem; margin-bottom: 5px; }
+
+.closeBtn {
+    position: absolute; top: 15px; right: 15px;
+    background: transparent; border: none;
+    color: var(--text-grey); font-size: 1.5rem;
+    cursor: pointer; transition: .3s;
+}
+.closeBtn:hover { color: var(--accent); }
+
+.expText {
+    color: var(--accent);
+    font: bold .9rem var(--font-body);
+    margin-bottom: 15px; text-transform: uppercase; letter-spacing: .05em;
+}
+.descText { color: var(--text-white); font: .95rem/1.5 var(--font-body); margin: 0; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* RESPONSIVIDADE */
+@media (min-width: 769px) {
+    .wrapper { padding: 50px 30px; }
+    .sectionTitle { font-size: 40px; margin-bottom: 40px; }
+    .cardsRow { gap: 25px; }
+    .card { width: 280px; }
+    .card img { width: 130px; height: 130px; }
+}
+
+@media (min-width: 1101px) {
+    .sectionTitle { font-size: 50px; }
+    .cardsRow { justify-content: center; gap: 30px; }
+    .card { width: 300px; }
+    .card h1 { font-size: 1.6rem; }
+}
