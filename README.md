@@ -23,6 +23,11 @@ Este projeto foi inicialmente idealizado como um trabalho freelancer e posterior
 
 ![Preview da Barbearia](./BaseBarber.gif)
 
+
+## Link
+https://gabrielbarbero.github.io/Base-Barber/
+
+
 ## ⚙️ Como rodar o projeto localmente
 
 Siga as instruções abaixo para clonar o repositório e executar o projeto na sua máquina:
