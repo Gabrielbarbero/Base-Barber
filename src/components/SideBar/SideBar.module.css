@@ -5,7 +5,7 @@
     --bg-nav-mobile: rgb(22, 22, 22);
     --border-outer: rgb(58, 58, 58);
     --border-inner: rgb(41, 41, 41);
-    --bg-buttom: rgba(0, 0, 0, 0.904);
+    --bg-button: rgba(0, 0, 0, 0.904); 
     --accent: rgb(187, 174, 0);
     --text-grey: rgb(99, 99, 99);
     --shadow: rgba(187, 174, 0, 0.35);
@@ -16,19 +16,19 @@
     top: 10px;
 }
 
-.sidebar_img {
+.sidebarImg {
     background-size: cover;
     width: 18px;
     height: 18px;
 }
 
-.sidebar_Buttom {
+.sidebarButton {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 42px;
     height: 42px;
-    background-color: var(--bg-buttom);
+    background-color: var(--bg-button);
     border-radius: 4px;
     border: 0;
     padding: 3px;
@@ -37,16 +37,16 @@
     transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.15s ease;
 }
 
-.sidebar_Buttom:hover {
+.sidebarButton:hover {
     border-color: var(--accent);
     box-shadow: 0 0 12px var(--shadow);
 }
 
-.sidebar_Buttom:active {
+.sidebarButton:active {
     transform: scale(0.96);
 }
 
-.sidebar_menu {
+.sidebarMenu {
     position: fixed;
     z-index: 99998;
     left: 0;
@@ -62,15 +62,15 @@
     box-shadow: 4px 0 24px rgba(0, 0, 0, 0.5);
 }
 
-.aberta {
+.open {
     transform: translateX(0);
 }
 
-.fechada {
+.closed {
     transform: translateX(-100%);
 }
 
-.close_Buttom {
+.closeButton {
     position: absolute;
     top: 18px;
     right: 18px;
@@ -89,30 +89,30 @@
     transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
 
-.close_Buttom:hover {
+.closeButton:hover {
     color: var(--accent);
     border-color: var(--accent);
     transform: rotate(90deg);
 }
 
-.lista_menu {
+.menuList {
     list-style: none;
     padding: 0 24px;
     margin: 0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.lista_menu li {
+.menuList li {
     position: relative;
     padding: 0;
     border-bottom: 1px solid var(--border-inner);
 }
 
-.lista_menu li:last-child {
+.menuList li:last-child {
     border-bottom: none;
 }
 
-.lista_menu a {
+.menuList a {
     display: block;
     padding: 26px 8px;
     font-size: 15px;
@@ -123,12 +123,12 @@
     transition: color 0.2s ease, padding-left 0.2s ease;
 }
 
-.lista_menu a:hover {
+.menuList a:hover {
     color: var(--accent);
     padding-left: 16px;
 }
 
-.lista_menu li::before {
+.menuList li::before {
     content: "";
     position: absolute;
     left: -14px;
@@ -140,7 +140,7 @@
     transition: transform 0.2s ease;
 }
 
-.lista_menu li:hover::before {
+.menuList li:hover::before {
     transform: translateY(-50%) scaleY(1);
 }
 

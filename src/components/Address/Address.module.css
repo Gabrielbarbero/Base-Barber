@@ -1,7 +1,7 @@
 /* =========================================
    ESTRUTURA BASE (MOBILE-FIRST)
    ========================================= */
-.SectionContact {
+.sectionContact {
     /* Cores */
     --bg-main: rgb(8, 8, 8);
     --bg-card: rgb(17, 17, 17);
@@ -29,13 +29,13 @@
     background-color: var(--bg-main);
 }
 
-.divMaster {
+.mainContainer {
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
 
-.divSeparation {
+.column {
     width: 100%;
 }
 
@@ -63,13 +63,13 @@
     letter-spacing: -0.1em;
 }
 
-.pTitle {
+.itemTitle {
     margin: 0;
     color: var(--text-white);
     font: 20px var(--font-body);
 }
 
-.pDescription {
+.itemDescription {
     margin: 0;
     color: var(--text-grey);
     font: 15px var(--font-body);
@@ -77,7 +77,7 @@
 }
 
 /* Imagens e Ícones */
-.Images {
+.icon {
     width: 30px;
     height: 30px;
     flex-shrink: 0;
@@ -92,7 +92,7 @@
     border-radius: 5px;
 }
 
-.linkImage {
+.linkIcon {
     width: 15px;
     height: 15px;
     padding: 7px;
@@ -100,7 +100,7 @@
     transition: filter 0.3s ease;
 }
 
-.imageButtom {
+.buttonIcon {
     width: 30px;
     height: 30px;
     flex-shrink: 0;
@@ -122,7 +122,7 @@
     gap: 4px;
 }
 
-.backgroundDiv {
+.backgroundCard {
     padding: 15px;
     background-color: var(--bg-card);
     border: 1px solid var(--border-dark);
@@ -130,7 +130,7 @@
 }
 
 /* Redes Sociais e Links */
-.divLinks {
+.linksContainer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -138,7 +138,7 @@
     padding: 40px 0 0 0;
 }
 
-.socialMedias {
+.socialMediaLink {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -152,17 +152,17 @@
     transition: border-color 0.3s ease, color 0.3s ease;
 }
 
-.socialMedias:hover {
+.socialMediaLink:hover {
     border-color: var(--accent);
     color: var(--accent);
 }
 
-.socialMedias:hover .linkImage {
+.socialMediaLink:hover .linkIcon {
     filter: var(--filter-accent);
 }
 
 /* Botões Customizados */
-.customButtom {
+.customButton {
     box-sizing: border-box; 
     display: flex; 
     align-items: center;
@@ -179,11 +179,11 @@
     transition: background-color 0.3s ease;
 }
 
-.customButtom:hover {
+.customButton:hover {
     background-color: var(--accent-hover);
 }
 
-.tinyWords {
+.helperText {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -197,32 +197,32 @@
    RESPONSIVIDADE (Telas Grandes / PC)
    ========================================= */
 @media (min-width: 769px) {
-    .SectionContact {
+    .sectionContact {
         padding: 50px;
     }
 
-    .divMaster {
+    .mainContainer {
         flex-direction: row;
         gap: 0;
     }
 
-    .divSeparation {
+    .column {
         width: 50%;
         padding: 30px;
     }
 
-    .divLinks {
+    .linksContainer {
         justify-content: flex-start;
         flex-wrap: nowrap;
         padding: 0 50px 50px 30px;
     }
 
-    .socialMedias {
+    .socialMediaLink {
         margin-right: 0.8vw;
         font-size: 3vmin;
     }
 
-    .customButtom {
+    .customButton {
         font-size: 4vmin;
     }
 }

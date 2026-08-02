@@ -15,7 +15,7 @@
     background-color: var(--bg-main);
 }
 
-.h1 {
+.title {
     margin: 0 0 25px 0;
     color: var(--accent);
     font: bold 32px var(--font-body);
@@ -38,7 +38,7 @@
     transform: translateY(-8px);
 }
 
-.tabelaImagem {
+.tableImage {
     display: block;
     width: 100%;
     height: auto;
@@ -53,7 +53,7 @@
         padding: 50px 20px;
     }
 
-    .h1 {
+    .title {
         margin: 0 0 40px 0;
         font-size: 50px;
     }

@@ -3,13 +3,13 @@
    ========================================= */
 
 /* CABEÇALHO DA SESSÃO */
-.startDiv {
+.headerContainer {
     /* Variáveis do Componente */
     --bg-main: rgb(8, 8, 8);
     --accent: rgb(187, 174, 0);
     --text-white: rgb(255, 255, 255);
-    --font-h2: Verdana, Geneva, Tahoma, sans-serif;
-    --font-h3: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', sans-serif;
+    --font-title: Verdana, Geneva, Tahoma, sans-serif;
+    --font-subtitle: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', sans-serif;
     --font-link: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
     box-sizing: border-box;
@@ -21,30 +21,30 @@
     background-color: var(--bg-main);
 }
 
-.Title {
+.titleWrapper {
     max-width: 100%; 
 }
 
-.h3 {
+.subtitle {
     margin: 0;
     color: var(--accent);
-    font: 16px var(--font-h3);
+    font: 16px var(--font-subtitle);
     letter-spacing: 0.2em;
 }
 
-.h2 {
+.title {
     margin: 5px 0 0 0;
     color: var(--text-white);
-    font: 26px var(--font-h2);
+    font: 26px var(--font-title);
     letter-spacing: -0.1em;
 }
 
-.hourWorks {
+.linkContainer {
     margin-bottom: 5px; 
 }
 
-.hourLink {
-    padding: 10px 0; /* Aumenta a área de clique no mobile */
+.bookingLink {
+    padding: 10px 0; 
     color: var(--accent);
     font: 18px var(--font-link);
     text-decoration: none;
@@ -52,13 +52,12 @@
     transition: color 0.3s ease;
 }
 
-.hourLink:hover {
+.bookingLink:hover {
     color: var(--text-white); 
 }
 
 /* GALERIA DE FOTOS */
-.cardsContainer {
-    /* Repassando variáveis caso não estejam em um wrapper pai */
+.galleryContainer {
     --bg-main: rgb(8, 8, 8);
     --shadow-hover: 0 10px 20px rgba(0, 0, 0, 0.5);
 
@@ -70,22 +69,24 @@
     background-color: var(--bg-main);
 }
 
-.cards {
+.imageGrid {
     display: grid;
-    grid-template-columns: 1fr; /* 1 Coluna no Mobile */
+    grid-template-columns: 1fr;
     gap: 25px;
     width: 90%; 
 }
 
-.cards img {
+/* Estilização focada diretamente na tag da imagem */
+.galleryImage {
+    display: block;
     width: 100%; 
-    height: 350px; /* Achata a imagem para não exigir muito scroll */
+    height: 350px; 
     border-radius: 5px;
     object-fit: cover;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.cards img:hover {
+.galleryImage:hover {
     transform: scale(1.02); 
     box-shadow: var(--shadow-hover);
 }
@@ -94,7 +95,7 @@
    ESTÁGIO 1: TABLETS (Entre 769px e 1100px)
    ========================================= */
 @media (min-width: 769px) {
-    .startDiv {
+    .headerContainer {
         flex-direction: row;
         align-items: flex-end;
         justify-content: space-between;
@@ -102,30 +103,30 @@
         padding: 40px 8%; 
     }
 
-    .Title {
+    .titleWrapper {
         max-width: 70%; 
     }
 
-    .h3 {
+    .subtitle {
         font-size: 20px;
     }
 
-    .h2 {
+    .title {
         font-size: 30px;
     }
 
-    .hourLink {
+    .bookingLink {
         padding: 0;
         font-size: 20px;
     }
 
-    .cards {
-        grid-template-columns: repeat(2, 1fr); /* 2 Colunas */
+    .imageGrid {
+        grid-template-columns: repeat(2, 1fr);
         gap: 20px;
         width: 84%;
     }
 
-    .cards img {
+    .galleryImage {
         height: 400px; 
     }
 }
@@ -134,16 +135,16 @@
    ESTÁGIO 2: DESKTOP / PC (A partir de 1101px)
    ========================================= */
 @media (min-width: 1101px) {
-    .h2 {
+    .title {
         font-size: 35px;
     }
 
-    .cards {
-        grid-template-columns: repeat(3, 1fr); /* 3 Colunas */
+    .imageGrid {
+        grid-template-columns: repeat(3, 1fr); 
         gap: 30px; 
     }
 
-    .cards img {
-        height: 450px; /* Proporção ideal de retrato pro desktop */
+    .galleryImage {
+        height: 450px; 
     }
 }

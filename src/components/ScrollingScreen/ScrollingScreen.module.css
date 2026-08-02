@@ -1,7 +1,7 @@
 /* =========================================
    ESTRUTURA BASE (CELULARES - Até 768px)
    ========================================= */
-.CarouselContainer {
+.carouselContainer {
     /* Variáveis do Componente */
     --bg-btn: rgba(92, 92, 92, 0.34);
     --bg-btn-hover: rgba(54, 54, 54, 0.5);
@@ -14,14 +14,14 @@
     margin: 0 auto;
 }
 
-.SliderTrack {
+.sliderTrack {
     display: flex;
     width: 100%; 
     height: 100%;
     transition: transform 0.5s ease-in-out; 
 }
 
-.Screen {
+.screen {
     flex: 0 0 100%;
     height: 100%;
     background-repeat: no-repeat;
@@ -33,7 +33,7 @@
         inset 0 -40px 40px 0 var(--shadow-color);
 }
 
-.Trade_Buttons {
+.tradeButtons {
     position: absolute; 
     top: 50%;
     z-index: 10; 
@@ -50,7 +50,7 @@
     transition: background-color 0.2s ease;
 }
 
-.Trade_Buttons:hover {
+.tradeButtons:hover {
     background-color: var(--bg-btn-hover); 
 }
 
@@ -62,7 +62,7 @@
     right: 10px;
 }
 
-.Seta {
+.arrowIcon {
     width: 50%;
     height: auto;
     opacity: 0.9;
@@ -77,18 +77,17 @@
    ESTÁGIO 1: TABLETS (Entre 769px e 1100px)
    ========================================= */
 @media (min-width: 769px) {
-    .CarouselContainer {
+    .carouselContainer {
         height: 60vh; 
     }
 
-    .Screen {
-
+    .screen {
         box-shadow: 
             inset 0 60px 60px 0 var(--shadow-color),    
             inset 0 -60px 60px 0 var(--shadow-color);
     }
 
-    .Trade_Buttons {
+    .tradeButtons {
         width: 50px; 
         height: 50px;
     }
@@ -105,14 +104,12 @@
 /* =========================================
    ESTÁGIO 2: DESKTOP / PC (A partir de 1101px)
    ========================================= */
-
 @media (min-width: 1101px) {
-    .CarouselContainer {
+    .carouselContainer {
         height: 90vh; 
     }
 
-    .Screen {
-
+    .screen {
         box-shadow: 
             inset 0 100px 100px 0 var(--shadow-color),    
             inset 0 -100px 100px 0 var(--shadow-color);
