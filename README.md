@@ -29,4 +29,4 @@ Siga as instruções abaixo para clonar o repositório e executar o projeto na s
 
 1. **Clone o repositório:**
    ```bash
-   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   git clone https://github.com/gabrielbarbero/Base-Barber.git
